@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>reveal.js – The HTML Presentation Framework</title>
+
+    <meta
+      name="description"
+      content="A framework for easily creating beautiful presentations using HTML"
+    />
+    <meta name="author" content="Hakim El Hattab" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <link
+      href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700&subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,cyrillic"
+      rel="stylesheet"
+      type="text/css"
+      data-application-font="opensans"
+    />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <!-- <link rel="stylesheet" href="lib/css/zenburn.css" /> -->
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/atom-one-dark.min.css"
+    />
+
+    <!--[if lt IE 9]> <script src="lib/js/html5shiv.js"></script> <![endif]-->
+  </head>
+
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section
+          data-background-image="https://s3.amazonaws.com/media-p.slid.es/uploads/841906/images/5646146/Screen_Shot_2019-01-05_at_1.59.35_PM.png"
+          class="title"
+        >
+          <!-- <img
+            src="https://www.jsleague.ro/images/logo/logo-flat.png"
+            alt="JSLeague Logo"
+            style="position: absolute; left: 0; width: 100px;"
+          /> -->
+          <a
+            href="https://jsleague.ro/"
+            target="_blank"
+            style="position: static;"
+          >
+            <img
+              src="https://www.jsleague.ro/images/logo/logo-slim-white.png"
+              class="logo"
+              alt="JSLeague Logo"
+              style="width: 150px;"
+            />
+          </a>
+          <h2 style="margin-top:100px;">JSLeague Proudly Presents</h2>
+          <img
+            src="https://vuejs.org/images/logo.png"
+            alt="Vue.js Logo"
+            class="simple"
+            style="width: 200px;"
+          />
+          <h2>
+            <strong>Advanced</strong> Vue.js Component Patterns
+            <sup style="font-size: 0.5em;">beta</sup>
+            <br>Bogdan Luca
+          </h2>
+          <p
+            style="align-self: flex-start; position: relative; top: 50px; text-align: left;"
+          >
+            31st of March, 2019<br />DOvelopers Office
+          </p>
+        </section>
+
+        <section data-background-color="#fcf4c8">
+          <div class="slide-logo">
+            <img
+              src="https://www.jsleague.ro/images/logo/logo-flat.png"
+              alt="JSLeague Logo"
+            />
+            <div>Advanced Vue.js Component Patterns</div>
+          </div>
+          <h2>About Me, About You...</h2>
+          <h3>Hello, I'm Bogdan!<br><span class="fragment">
+            (self-proclaimed "Master of Vue.js" 🙂)</span></h3>
+          <ul>
+            <li class="fragment">
+              been programming for ~25y
+            </li>
+            <li class="fragment">
+              sysadmin, networking, backend, frontend, ...
+            </li>
+            <li class="fragment">
+              dev&ops @<a href="https://codesandbox.io/" target="_blank"
+                >CodeSandbox.io</a
+              >
+              — "The online code editor for Web"
+            </li>
+            <li class="fragment">
+              (used to) 24/7 support on
+              <a href="https://chat.vuejs.org/" target="_blank"
+                >Vue.js Official Chat</a
+              >
+              — BogdanL
+            </li>
+          </ul>
+        </section>
+
+        ${CONTENT}
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          {
+            src: 'lib/js/classList.js',
+            condition: function() {
+              return !document.body.classList;
+            },
+          },
+          {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            },
+          },
+        ],
+
+        width: '100%',
+        height: '100%',
+        center: false,
+        zoomLevel: 1.5,
+      });
+
+      window.addEventListener('mousedown', handleClick, false);
+      window.addEventListener(
+        'contextmenu',
+        function(e) {
+          e.preventDefault();
+        },
+        false
+      );
+
+      function handleClick(e) {
+        if (e.target.tagName !== 'A') {
+          e.preventDefault();
+          if (e.button === 0) Reveal.prev();
+          if (e.button === 2) Reveal.next();
+        }
+      }
+    </script>
+  </body>
+</html>
