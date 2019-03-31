@@ -6,7 +6,7 @@
 yarn
 ```
 
-> Note: this repository only works with `yarn` because it uses [yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/).
+> Note: this repository only works with `yarn` because it uses [yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/). If you don't have it, install it with `npm -g install yarn`.
 
 ### Run a task
 
