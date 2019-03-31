@@ -4,7 +4,7 @@
 
 Create a `SelectOther` component that receives a string array `options` and shows a select having all those options, and an additional `Other` option, that when selected, shows an input where you can type a custom value. Make it work with `v-model`, i.e.
 
-```
+```html
 <select-other :options="options" v-model="selectedOption" />
 ```
 
