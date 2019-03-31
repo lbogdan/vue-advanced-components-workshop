@@ -8,7 +8,7 @@ Create a `Hero` component that shows the first name, last name and the framework
 
 - use the following markup:
 
-```
+```html
 <div>First Name</div>
 <div>Last Name</div>
 <div>Framework</div>
