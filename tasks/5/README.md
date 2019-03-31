@@ -17,7 +17,7 @@ Create a `PageLayout` component that receives 3 slots: default, `footer` and `he
 
 - use the following markup:
 
-```
+```html
 <header>
   here be default header
 </header>
