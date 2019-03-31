@@ -2,4 +2,4 @@
 
 ## Goal
 
-Use scoped slots to customize how a hero row looks like; show only the first name and the selected checkbox columns.
+Use scoped slots to customize how a `Hero` row from task 1 looks like; show only the first name and the selected checkbox columns.
