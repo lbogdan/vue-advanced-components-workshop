@@ -6,7 +6,7 @@
   - describe the task
   - 10 minutes for you to solve the task ⇄ 5 more minutes to solve the task together
 - (if there's time left) one freestyle task
-- 15' break
+- 15' coffee break
 
 ## Components
 
@@ -75,9 +75,17 @@ export default {
 9. `Tabs` & `Tab` components
 10. ???
 
+## Tests
+
+- run with `yarn task#:test`
+- using `jest` and `@vue/test-utils`
+- using `jsdom` to "emulate" DOM, might be different than browsers
+
 ## Warming Up - Task 1
 
 Create a component that receives props and sends events.
+
+- run with `yarn task1`
 
 ## Mixins
 
@@ -89,7 +97,7 @@ Create a component that receives props and sends events.
 
 Extract the common API fetch logic from two components.
 
-## Mixins Pros / Cons
+## Mixins Pros & Cons
 
 - pros
   - DRY
@@ -156,6 +164,8 @@ Create a modal component.
 
 ## Named Slots
 
+- new syntax since 2.6
+
 - in parent
 
 ```html
@@ -180,8 +190,13 @@ Create a modal component.
 
 Create a `PageLayout` component that takes 3 slots — default, `header` and `footer`.
 
+## PageLayout Note
+
+- navigating between pages repaints the whole layout (not really noticeable, though)
+
 ## Lazy-loaded Components
 
+- don't load **all** of your application upfront if you don't really need to
 - usually used with route components
 
 ```js
@@ -251,12 +266,19 @@ export default {
 
 Define a `ThemeProvider` that provides a `theme` object, with `color` and `backgroundColor` properties. Use the provided `theme` in a descendant component.
 
+## Provide / Inject Pros & Cons
+
+- pros
+  - send data to descendants more than one level deep
+- cons
+  - not obviously reactive
+
 ## Wrapping jQuery Components
 
 - initialization goes in `mounted()`
 - use `this.$el`, the component's root DOM element
 - (two-way) react to changes during the component's lifecycle
-- cleanup goes in `beforeDestroy()`
+- **cleanup goes in `beforeDestroy()`**
 
 ## Task 8
 
@@ -270,8 +292,8 @@ Implement `Tabs` and `Tab` components.
 
 - Vue.js documentation, pretty much
 - Vue.js source code
-- [Renderless Components in Vue.js](https://adamwathan.me/renderless-components-in-vuejs/)
-- [7 Secret Patterns Vue Consultants Don’t Want You to Know](https://www.youtube.com/watch?v=7lpemgMhi0k)
+- [Renderless Components in Vue.js - Adam Wathan](https://adamwathan.me/renderless-components-in-vuejs/)
+- [7 Secret Patterns Vue Consultants Don’t Want You to Know - Chris Fritz](https://www.youtube.com/watch?v=7lpemgMhi0k)
 
 ## Thank you! 🙏
 
