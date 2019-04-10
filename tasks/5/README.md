@@ -37,11 +37,12 @@ yarn task5-serve
 
 - use `syntax-dynamic-import` babel plugin
 
-```json
-// babel.rc
-{
-  "plugins": ["@babel/plugin-syntax-dynamic-import"]
-}
+```js
+// babel.config.js
+module.exports = {
+  // ...
+  plugins: ['@babel/plugin-syntax-dynamic-import'],
+};
 ```
 
 - remove the `prefetch` webpack plugin

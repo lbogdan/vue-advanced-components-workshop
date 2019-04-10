@@ -77,7 +77,7 @@ export default {
 
 ## Tests
 
-- run with `yarn task#:test`
+- run with `yarn task#:test [--watch]`
 - using `jest` and `@vue/test-utils`
 - using `jsdom` to "emulate" DOM, might be different than browsers
 

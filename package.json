@@ -4,15 +4,21 @@
   "private": true,
   "scripts": {
     "task1": "yarn workspace task1 serve",
+    "task1:test": "yarn workspace task1 test:unit",
     "task2": "yarn workspace task2 serve",
     "task3": "yarn workspace task3 serve",
+    "task3:test": "yarn workspace task3 test:unit",
     "task4": "yarn workspace task4 serve",
+    "task4:test": "yarn workspace task4 test:unit",
     "task5": "yarn workspace task5 serve",
     "task5-serve": "yarn workspace task5 build && yarn serve -s tasks/5/dist",
+    "task5:test": "yarn workspace task5 test:unit",
     "task6": "yarn workspace task6 serve",
     "task7": "yarn workspace task7 serve",
+    "task7:test": "yarn workspace task7 test:unit",
     "task8": "yarn workspace task8 serve",
     "task9": "yarn workspace task9 serve",
+    "task9:test": "yarn workspace task9 test:unit",
     "slides": "yarn workspace slides serve"
   },
   "workspaces": [
