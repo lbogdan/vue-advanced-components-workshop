@@ -1,8 +1,10 @@
 <template>
   <div class="row">
-    <div>{{ data.firstName }}</div>
-    <div>{{ data.lastName }}</div>
-    <div>{{ data.framework }}</div>
+    <slot v-bind:hero="data">
+      <div>{{ data.firstName }}</div>
+      <div>{{ data.lastName }}</div>
+      <div>{{ data.framework }}</div>
+    </slot>
     <div><input type="checkbox" v-model="selected" /></div>
   </div>
 </template>

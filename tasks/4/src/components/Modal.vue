@@ -4,19 +4,19 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">TODO: Modal Title</h5>
+            <h5 class="modal-title">{{ title }}</h5>
             <button type="button" class="close" @click="close">
               <span>&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            TODO: modal body here
+            <slot />
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" @click="close">
               Close
             </button>
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-primary" @click="$emit('ok')">
               OK
             </button>
           </div>
@@ -30,6 +30,21 @@
 <script>
 export default {
   name: 'modal',
-  // TODO
+  props: {
+    value: {
+      type: Boolean,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: false,
+      default: '',
+    },
+  },
+  methods: {
+    close() {
+      this.$emit('input', false);
+    },
+  },
 };
 </script>

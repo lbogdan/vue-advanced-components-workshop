@@ -1,23 +1,31 @@
 <template>
-  <div id="app">
-    <square>TODO: I am square!</square>
-    <button @click="withTheme = !withTheme">
+  <component
+    :is="withTheme ? 'ThemeProvider' : 'div'"
+    id="app"
+    :theme="currentTheme"
+  >
+    <square>I am square!</square>
+    <button class="toggle" @click="withTheme = !withTheme">
       With{{ withTheme ? 'out' : '' }} theme
     </button>
-    <button>
-      TODO: Switch theme
+    <button
+      class="switch"
+      v-if="withTheme"
+      @click="currentThemeId = 1 - currentThemeId"
+    >
+      Switch theme
     </button>
-  </div>
+  </component>
 </template>
 
 <script>
-// import ThemeProvider from './components/ThemeProvider.vue';
+import ThemeProvider from './components/ThemeProvider.vue';
 import Square from './components/Square.vue';
 
 export default {
   name: 'app',
   components: {
-    // ThemeProvider,
+    ThemeProvider,
     Square,
   },
   data() {
@@ -33,7 +41,13 @@ export default {
         },
       ],
       withTheme: false,
+      currentThemeId: 0,
     };
+  },
+  computed: {
+    currentTheme() {
+      return this.themes[this.currentThemeId];
+    },
   },
 };
 </script>

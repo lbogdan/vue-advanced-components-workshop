@@ -1,6 +1,16 @@
 <template>
   <div class="container">
-    TODO
+    <header>
+      <slot name="header">here be default header</slot>
+    </header>
+    <div class="content">
+      <slot />
+    </div>
+    <footer v-if="!('footer' in $slots) || $slots.footer">
+      <slot name="footer">
+        here be default footer
+      </slot>
+    </footer>
   </div>
 </template>
 

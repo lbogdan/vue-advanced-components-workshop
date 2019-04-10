@@ -2,9 +2,9 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import Home from '../pages/Home.vue';
-import Page1 from '../pages/Page1.vue';
-import Page2 from '../pages/Page2.vue';
-import Page3 from '../pages/Page3.vue';
+const Page1 = () => import('../pages/Page1.vue');
+const Page2 = () => import('../pages/Page2.vue');
+const Page3 = () => import('../pages/Page3.vue');
 
 Vue.use(VueRouter);
 

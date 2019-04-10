@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div v-if="loading">loading people...</div>
+    <div v-if="data.loading">loading people...</div>
     <ul v-else>
-      <li v-for="person in people" :key="person.url">
+      <li v-for="person in data.list" :key="person.url">
         {{ person.name }}
       </li>
     </ul>
@@ -10,29 +10,13 @@
 </template>
 
 <script>
-import axios from 'axios';
-// import APIFetchMixin from './APIFetchMixin';
+import APIFetch from './APIFetchMixin';
 
 export default {
-  name: 'people-list',
-  // mixins: [APIFetchMixin],
-  data() {
-    return {
-      loading: false,
-      people: [],
-    };
-  },
+  name: 'people-list-2',
+  mixins: [APIFetch],
   created() {
-    this.loadPeople();
-  },
-  methods: {
-    loadPeople() {
-      this.loading = true;
-      axios.get('https://swapi.co/api/people').then(res => {
-        this.people = res.data.results;
-        this.loading = false;
-      });
-    },
+    this.loadData('https://swapi.co/api/people');
   },
 };
 </script>

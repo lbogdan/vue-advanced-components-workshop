@@ -1,6 +1,6 @@
 <template>
-  <div>
-    Tab contents
+  <div v-if="active">
+    <slot />
   </div>
 </template>
 
@@ -12,6 +12,11 @@ export default {
       type: String,
       required: true,
     },
+  },
+  data() {
+    return {
+      active: false,
+    };
   },
 };
 </script>

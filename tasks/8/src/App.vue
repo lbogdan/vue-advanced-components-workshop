@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <multi-select :options="options" v-model="selected" />
+    <multi-select :options="options" v-model="selected" v-if="show" />
     <div class="selected">Selected options: {{ selected }}</div>
     <button @click="selected = [1, 3]">Select 1st and 3rd</button>
     <button @click="selected = []">Clear selection</button>
+    <button @click="show = !show">Show / hide</button>
   </div>
 </template>
 
@@ -40,6 +41,7 @@ export default {
         },
       ],
       selected: [],
+      show: true,
     };
   },
 };

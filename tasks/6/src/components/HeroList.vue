@@ -5,7 +5,11 @@
       :key="hero.id"
       :data="hero"
       @select="selectHero"
-    />
+    >
+      <template v-slot:default="{ hero }">
+        <div>{{ hero.firstName }}</div>
+      </template>
+    </hero>
     <div>{{ selectedHeroes }}</div>
     <button @click="randomSelect">Select random heroes</button>
   </div>
