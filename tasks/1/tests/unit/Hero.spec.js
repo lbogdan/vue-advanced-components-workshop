@@ -43,7 +43,7 @@ describe('Hero.vue', () => {
     wrapper = createWrapper();
     wrapper.vm.data.selected = true;
     const $checkbox = wrapper.find('input');
-    expect($checkbox.element.value).toBe('on');
+    expect($checkbox.element.checked).toBe(true);
   });
 
   it('emits a "select" event with the specified payload when clicking the checkbox', () => {
